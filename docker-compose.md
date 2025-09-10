@@ -1,11 +1,13 @@
-1. Docker Compose — это инструментальное средство, входящее в состав Docker. Оно разработано для помощи в определении и совместном использовании многоконтейнерных приложений. С помощью Docker Compose можно создать 1 YAML-файл для определения служб и с помощью одной команды запустить и остановить все, что нужно при развертывании многоконтейнерных приложений.
+1:
+
+Docker Compose — это инструментальное средство, входящее в состав Docker. Оно разработано для помощи в определении и совместном использовании многоконтейнерных приложений. С помощью Docker Compose можно создать 1 YAML-файл для определения служб и с помощью одной команды запустить и остановить все, что нужно при развертывании многоконтейнерных приложений.
 
 
 
 
 Задания 2-7: 
 ---prometheus.yml---
-<div>
+
   global:
   scrape_interval: 15s
   evaluation_interval: 15s
@@ -25,7 +27,7 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ["pushgateway:9091"]
-</div>
+
 
 ---grafana---
 
@@ -74,7 +76,6 @@ services:
     environment:
       - GF_PATHS_CONFIG=/home/herusl/hw-6-04/grafana/grafana.ini
     networks:
-    
       - gainetdinovrr-my-netology-hw
     restart: unless-stopped
     depends_on:
