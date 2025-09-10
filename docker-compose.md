@@ -6,7 +6,8 @@
 Задания 2-7: 
 ---prometheus.yml---
 
-global:
+<h>
+  global:
   scrape_interval: 15s
   evaluation_interval: 15s
 
@@ -25,18 +26,19 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ["pushgateway:9091"]
-
+</h>
 ---grafana---
-
+<h>
 [security]
 admin_user = gainetdinovrr
 admin_password = netology
 
 [server]
 http_port = 3000
-
+</h>
 ---docker-compose.yml---
 
+<h>
 version: '3.8'
 
 services:
@@ -88,7 +90,7 @@ networks:
     ipam:
       config:
         - subnet: 10.5.0.0/16
-
+</h>
 
 Grafana+Prometheus
 ![alt text](image-3.png)
