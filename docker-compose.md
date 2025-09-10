@@ -6,8 +6,7 @@
 Задания 2-7: 
 ---prometheus.yml---
 
-<h>
-  global:
+<h>global:
   scrape_interval: 15s
   evaluation_interval: 15s
 
@@ -25,8 +24,7 @@ scrape_configs:
   - job_name: 'pushgateway'
     honor_labels: true
     static_configs:
-      - targets: ["pushgateway:9091"]
-</h>
+      - targets: ["pushgateway:9091"]</h>
 ---grafana---
 <h>
 [security]
