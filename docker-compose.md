@@ -8,7 +8,7 @@ Docker Compose — это инструментальное средство, в�
 Задания 2-7: 
 
 
----prometheus.yml---
+---prometheus.yml, pushgateway, grafana.ini---
 
 
 ![alt text](image-5.png)
