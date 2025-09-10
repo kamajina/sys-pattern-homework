@@ -6,16 +6,25 @@ Docker Compose — это инструментальное средство, в�
 
 
 Задания 2-7: 
+
+
 ---prometheus.yml---
 
+
 ![alt text](image-5.png)
+
+
 ---docker-compose.yml---
+
 
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
 
+
 Grafana+Prometheus
+
+
 ![alt text](image-3.png)
 
 Остановка контейнеров: docker-compose down
