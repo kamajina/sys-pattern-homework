@@ -8,90 +8,12 @@ Docker Compose — это инструментальное средство, в�
 Задания 2-7: 
 ---prometheus.yml---
 
-  global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
-
-alerting: 
-  alertmanagers:
-    - static_configs:
-      - targets:
-
-rule_files: 
-scrape_configs:
-  - job_name: 'prometheus'
-    static_configs:
-      - targets: ["localhost:9090"]
-
-  - job_name: 'pushgateway'
-    honor_labels: true
-    static_configs:
-      - targets: ["pushgateway:9091"]
-
-
----grafana---
-
-[security]
-admin_user = gainetdinovrr
-admin_password = netology
-
-[server]
-http_port = 3000
-
+![alt text](image-5.png)
 ---docker-compose.yml---
 
+![alt text](image-6.png)
 
-version: '3.8'
-
-services:
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: gainetdinovrr-prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus/prometheus.yml:/home/herusl/hw-6-04/prometheus/prometheus.yml
-      - prometheus_data:/prometheus
-    networks:
-      - gainetdinovrr-my-netology-hw
-    restart: unless-stopped
-    depends_on:
-      - pushgateway
-  pushgateway:
-    image: prom/pushgateway:latest
-    container_name: gainetdinovrr-pushgateway
-    ports:
-      - "9091:9091"
-    networks:
-      - gainetdinovrr-my-netology-hw
-    restart: unless-stopped
-  grafana:
-    image: grafana/grafana:latest
-    container_name: gainetdinovrr-grafana
-    ports:
-      - "80:3000"
-    volumes:
-      - ./grafana/grafana.ini:/home/herusl/hw-6-04/grafana/grafana.ini
-      - grafana_data:/var/lib/grafana
-    environment:
-      - GF_PATHS_CONFIG=/home/herusl/hw-6-04/grafana/grafana.ini
-    networks:
-      - gainetdinovrr-my-netology-hw
-    restart: unless-stopped
-    depends_on:
-      - prometheus
-
-volumes:
-  prometheus_data:
-  grafana_data:
-
-networks:
-  gainetdinovrr-my-netology-hw:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.5.0.0/16
-
+![alt text](image-7.png)
 
 Grafana+Prometheus
 ![alt text](image-3.png)
