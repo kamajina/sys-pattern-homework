@@ -1,0 +1,42 @@
+- name: Configure system info MOTD
+  hosts: all
+  become: yes
+  vars:
+    welcome_message: "Welcome><Herusl"
+
+  tasks:
+    - name: Gather facts for network
+      setup:
+        filter: ansible_default_ipv4
+
+    - name: Create system info motd
+      copy:
+        content: |
+          ####################################################
+          # Добро пожаловать на сервер: {{ ansible_hostname }}
+          # IP-адрес: {{ ansible_default_ipv4.address }}
+          # {{ welcome_message }}
+          # 
+          # Система: {{ ansible_distribution }} {{ ansible_distribution_version }}
+          # Ядро: {{ ansible_kernel }}
+          # Процессор: {{ ansible_processor_vcpus }} ядер
+          # Память: {{ ansible_memtotal_mb }} MB
+          ####################################################
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Disable dynamic motd
+      file:
+        path: /etc/legal
+        state: absent
+      when: ansible_os_family == "Debian"
+
+    - name: Ensure PAM motd is disabled
+      lineinfile:
+        path: /etc/pam.d/sshd
+        regexp: '^session.*pam_motd.so'
+        line: '#session    optional     pam_motd.so  motd=/run/motd.dynamic'
+        state: present
+      when: ansible_os_family == "Debian"

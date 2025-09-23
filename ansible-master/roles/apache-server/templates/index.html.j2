@@ -1,0 +1,18 @@
+Server System Information
+Hostname: {{ ansible_hostname }}
+IP Address: {{ ansible_default_ipv4.address }}
+OS: {{ ansible_distribution }} {{ ansible_distribution_version }}
+Architecture: {{ ansible_architecture }}
+CPU: {{ ansible_processor_vcpus }} vCPUs
+Memory: {{ (ansible_memtotal_mb / 1024) | round(2) }} GB
+First HDD: 
+{% if ansible_devices %}
+{% for device in ansible_devices %}
+{% if loop.first %}
+{{ device }} ({{ (ansible_devices[device].size | replace('GB', '') | float) | round(2) }} GB)
+{% endif %}
+{% endfor %}
+{% else %}
+Information not available
+{% endif %}
+Uptime: {{ ansible_uptime_seconds | int / 3600 | round(2) }} hours
