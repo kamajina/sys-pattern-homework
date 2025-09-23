@@ -1,0 +1,25 @@
+- name: Configure custom MOTD
+  hosts: all
+  become: yes
+  vars:
+    custom_motd: "Welcome><Herusl"
+
+  tasks:
+    - name: Create custom motd file
+      copy:
+        content: |
+          ###########################################
+          # {{ custom_motd }}
+          # Система: {{ ansible_distribution }} {{ ansible_distribution_version }}
+          # Ядро: {{ ansible_kernel }}
+          ###########################################
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Disable dynamic motd (Ubuntu/Debian)
+      file:
+        path: /etc/legal
+        state: absent
+      when: ansible_os_family == "Debian"
