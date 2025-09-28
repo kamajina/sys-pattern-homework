@@ -1,0 +1,13 @@
+---
+- name: test
+  gather_facts: false
+  hosts: webservers
+  vars:
+    ansible_ssh_user: user
+  become: yes
+
+  tasks:
+    - name: nginx install
+      apt:
+        name: nginx
+        state: present
