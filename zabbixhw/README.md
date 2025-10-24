@@ -35,3 +35,4 @@ DBPassword=password
 # systemctl enable zabbix-agent
 
 ```
+![zabbix](./zabbix1.png)
