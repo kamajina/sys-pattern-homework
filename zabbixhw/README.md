@@ -23,7 +23,7 @@ DBPassword=password
 # systemctl restart zabbix-server zabbix-agent apache2
 # systemctl enable zabbix-server zabbix-agent apache2
 ```
-
+![zabbix1](./zabbix4.png)
 ### Задание 2
 
 ```
@@ -36,3 +36,5 @@ DBPassword=password
 
 ```
 ![zabbix](./zabbix1.png)
+![zabbix2](./zabbix2.png)
+![zabbix3](./zabbix3.png)
