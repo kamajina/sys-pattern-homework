@@ -2,7 +2,7 @@
 
 
 ### Задание 1
-!(./templatewithitems.png)
+![1](./templatewithitems.png)
 
 ### Задание 2-3
 
