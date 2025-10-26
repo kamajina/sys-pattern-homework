@@ -3,7 +3,7 @@
 
 ### Задание 1
 
-```
+
 # wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 # dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
 # apt update
@@ -22,11 +22,11 @@ DBPassword=password
 
 # systemctl restart zabbix-server zabbix-agent apache2
 # systemctl enable zabbix-server zabbix-agent apache2
-```
-![zabbix1](./zabbix4.png)
+
+
 ### Задание 2
 
-```
+
 # wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 # dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
 # apt update
@@ -34,7 +34,6 @@ DBPassword=password
 # systemctl restart zabbix-agent
 # systemctl enable zabbix-agent
 
-```
-![zabbix](./zabbix1.png)
-![zabbix2](./zabbix2.png)
-![zabbix3](./zabbix3.png)
+
+
+https://pixsafe.online/view?id=Oszwy
