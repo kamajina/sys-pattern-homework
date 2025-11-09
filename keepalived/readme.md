@@ -1,6 +1,6 @@
 # Домашнее задание к занятию "`«Disaster Recovery. FHRP и Keepalived»`" - `grr`
 ### Задание 1
-![zadanie2](./ciscopackettracer.png)
+![zadanie1](./ciscopackettracer.png)
 [hsrp](https://github.com/kamajina/sys-pattern-homework/blob/main/keepalived/hsrp_advanced_hw.pkt)
 ### Задание 2
 
