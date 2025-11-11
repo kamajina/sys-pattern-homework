@@ -26,5 +26,5 @@ backend tcp_servers
         server s1 127.0.0.1:8888 check inter 3s
         server s2 127.0.0.1:9999 check inter 3s
 ```
-[!1](./haproxy1.png)
+[!1](.haproxy1.png)
 ### Задание 1
