@@ -5,11 +5,11 @@ Master-Master: Двунаправленная репликация. Каждый
 
 
 ### Задание 2
-master:
+master:\
 ![zadanie2](./1.png)\
-slave:
+slave:\
 ![zadanie2](./2.png)\
-compose
+compose:\
 ![zadanie2](./3.png)\
-result
+result\
 ![zadanie2](./4.png)
