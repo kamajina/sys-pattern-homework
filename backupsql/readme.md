@@ -1,5 +1,5 @@
 # Домашнее задание к занятию "`«Replication MySQL 2»`" - `grr`
-`Задание 1. Резервное копирование
+Задание 1. Резервное копирование
 Кейс
 Финансовая компания решила увеличить надёжность работы баз данных и их резервного копирования.
 
@@ -21,7 +21,7 @@
 3.1. С помощью официальной документации приведите пример команды инкрементного резервного копирования базы данных MySQL.
 
 
-Приведите ответ в свободной форме.`
+Приведите ответ в свободной форме.
 
 ### Задание 1
 1.1. Восстановление данных в полном объёме за предыдущий день
@@ -36,19 +36,19 @@
 ### Задание 2
 Резервирование:
 
-pg_dump -U username -F c -b -v -f backup.dump mydatabase
+`pg_dump -U username -F c -b -v -f backup.dump mydatabase`
 
 
 Восстановление:
 
-pg_restore -U username -d newdatabase -v backup.dump
+`pg_restore -U username -d newdatabase -v backup.dump`
 
 ### Задание 3
 
 Создать полный бэкап:
 
-mysqldump -u root -p --flush-logs --master-data=2 --single-transaction --all-databases > full_backup.sql
+`mysqldump -u root -p --flush-logs --master-data=2 --single-transaction --all-databases > full_backup.sql`
 
 Копировать бинарные логи для инкрементного бэкапа:
 
-mysqlbinlog /var/lib/mysql/mysql-bin.000012 > inc_backup_000012.sql
+`mysqlbinlog /var/lib/mysql/mysql-bin.000012 > inc_backup_000012.sql`
