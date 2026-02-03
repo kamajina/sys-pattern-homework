@@ -31,13 +31,13 @@
 
 ### Задание 1
 ![zadanie1](./1.png)
-https://www.exploit-db.com/exploits/49757\
-https://www.exploit-db.com/exploits/30020\
-https://www.exploit-db.com/exploits/32849\
+https://www.exploit-db.com/exploits/49757 \
+https://www.exploit-db.com/exploits/30020 \
+https://www.exploit-db.com/exploits/32849 \
 
 ### Задание 2
 
 SYN - Не устанавливает соединение полное TCP соединение, при нахождении открытого порта посылает RST и закрывает соединения, оповещая об открытом порте\
 FIN - Отправка TCP FIN с имитацией установленного соединения, открытые порты игнонируются, закрытые - RST\
 Xmas - Отправка FIN+PSH+URG, легче детектируется, ответы как и при FIN\
-UDP - Посылает ICMP и ждет ответа с таймаутами, закрытые порты отвечают ICMP Port Unreachable\
+UDP - Посылает ICMP и ждет ответа с таймаутами, закрытые порты отвечают ICMP Port Unreachable
