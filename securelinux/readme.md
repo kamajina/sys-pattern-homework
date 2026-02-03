@@ -30,10 +30,10 @@
 Приведите ответ в свободной форме.
 
 ### Задание 1
-![zadanie1](./1.png)
+![zadanie1](./1.png) \
 https://www.exploit-db.com/exploits/49757 \
 https://www.exploit-db.com/exploits/30020 \
-https://www.exploit-db.com/exploits/32849 \
+https://www.exploit-db.com/exploits/32849 
 
 ### Задание 2
 
